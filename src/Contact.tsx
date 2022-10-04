@@ -19,7 +19,9 @@ export default function Contact() {
     message: "",
   });
   const [modalState, setModalState] = useState<boolean>(false);
-  const [response, setResponse] = useState<string>();
+  const [response, setResponse] = useState<string>(
+    "Unsuccesful, please fill out required fields"
+  );
 
   const handleChange = (event: any) => {
     const { name, value } = event.target;
@@ -48,7 +50,7 @@ export default function Contact() {
         setResponse("Error!, please try again" + error);
       });
   };
-  console.log(formData);
+
   return (
     <body className="mt-5 w-screen h-screen flex flex-row justify-center items-center sticky top-0 bg-rose-900">
       <Modal

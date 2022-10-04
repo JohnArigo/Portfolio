@@ -16,9 +16,9 @@ function App() {
   return (
     <body>
       <Nav />
-      <Title />
+      <Title portSize={portSize} setPortSize={setPortSize} />
       <Experience portSize={portSize} setPortSize={setPortSize} />
-      <Projects />
+      <Projects portSize={portSize} setPortSize={setPortSize} />
       <Contact />
     </body>
   );

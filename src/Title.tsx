@@ -1,4 +1,17 @@
-export default function Title() {
+import { ports } from "./types";
+import { useEffect } from "react";
+
+export default function Title({ portSize, setPortSize }: ports) {
+  useEffect(() => {
+    function handleResize() {
+      setPortSize({
+        height: window.innerHeight,
+        width: window.innerWidth,
+      });
+    }
+
+    window.addEventListener("resize", handleResize);
+  }, []);
   return (
     <body className="w-screen h-screen flex flex-row bg-red-200 sticky top-0">
       <main className="w-1/2 flex flex-col justify-center">
