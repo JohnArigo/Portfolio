@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Nav from "./Nav";
+import Contact from "./Contact";
+import Experience from "./Experience";
+import Projects from "./Projects";
+import Title from "./Title";
+import { useState } from "react";
+import { portType } from "./types";
 
 function App() {
+  const [portSize, setPortSize] = useState<portType>({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <body>
+      <Nav />
+      <Title />
+      <Experience portSize={portSize} setPortSize={setPortSize} />
+      <Projects />
+      <Contact />
+    </body>
   );
 }
 
