@@ -1,5 +1,7 @@
 import { ports } from "./types";
 import { useEffect } from "react";
+import downArrowBlack from "./images/downArrowBlack.png";
+import downArrowGradient from "./images/downArrowGradient.png";
 
 export default function Title({
   portSize,
@@ -36,7 +38,7 @@ export default function Title({
   const light =
     " w-screen h-screen flex flex-row flex-wrap  sticky top-0 bg-white text-slate-900 ";
   const dark =
-    "w-screen h-screen flex flex-row flex-wrap  sticky top-0 dark:bg-slate-800 dark:text-white";
+    "w-screen h-screen flex flex-row flex-wrap  sticky top-0 bg-slate-900 text-white";
   return (
     <body id="Title" className={bgMode ? light : dark}>
       <section className="flex flex-row h-5/6 w-full">
@@ -54,12 +56,20 @@ export default function Title({
         ) : null}
       </section>
       {screenPercent > 0.005 ? (
-        <a
-          href="#Experience"
-          className=" w-full h-1/6 flex flex-row justify-center items-center"
-        >
-          <aside className="w-full h-full text-center">Arrow Here</aside>
-        </a>
+        <aside className=" w-full h-1/6 flex flex-row justify-center items-start animate-bounce">
+          {bgMode ? (
+            <a href="#Experience">
+              <img className="w-20 h-20 cursor-pointer" src={downArrowBlack} />
+            </a>
+          ) : (
+            <a href="#Experience">
+              <img
+                className="w-14 h-14 cursor-pointer"
+                src={downArrowGradient}
+              />
+            </a>
+          )}
+        </aside>
       ) : null}
     </body>
   );

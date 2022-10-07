@@ -9,6 +9,8 @@ import c from "./images/C.svg";
 import { useEffect } from "react";
 import { portType } from "./types";
 import { ports } from "./types";
+import downArrowBlack from "./images/downArrowBlack.png";
+import downArrowGradient from "./images/downArrowGradient.png";
 
 export default function Experience({
   portSize,
@@ -49,9 +51,9 @@ export default function Experience({
   };
 
   const light =
-    "w-screen h-screen flex flex-col justify-end bg-white sticky top-0 text-slate-900";
+    "w-screen h-screen flex flex-col justify-center bg-white sticky top-0 text-slate-900";
   const dark =
-    "w-screen h-screen flex flex-col justify-end sticky top-0 dark:bg-slate-800 dark:text-white";
+    "w-screen h-screen flex flex-col justify-center sticky top-0 bg-slate-700 text-white";
 
   return (
     <body id="Experience" className={bgMode ? light : dark}>
@@ -75,7 +77,7 @@ export default function Experience({
           <img className="w-40 h-40" src={dev} />
         </section>
       </main>
-      <footer className="mb-10 w-full flex flex-col justify-start h-1/4 mt-10 self-center">
+      <footer className=" w-full flex flex-col justify-start h-1/4 self-center">
         <h1 className="self-center mt-5">Skills</h1>
         <section className="flex flex-row justify-center w-full">
           <div>
@@ -104,11 +106,23 @@ export default function Experience({
           </div>
         </section>
         {screenPercent > 1.005 ? (
-          <a href="#Projects">
-            <section className="mb-3 w-full text-center">
-              Arrow Goes Here
-            </section>
-          </a>
+          <section className="mt-7 w-full flex flex-row justify-center items-start animate-bounce">
+            {bgMode ? (
+              <a href="#Projects">
+                <img
+                  className="w-20 h-20 cursor-pointer"
+                  src={downArrowBlack}
+                />
+              </a>
+            ) : (
+              <a href="#Projects">
+                <img
+                  className="w-14 h-14 cursor-pointer"
+                  src={downArrowGradient}
+                />
+              </a>
+            )}
+          </section>
         ) : (
           <section className="text-transparent mb-3">
             This is a placer holder

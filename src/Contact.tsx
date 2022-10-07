@@ -59,15 +59,19 @@ export default function Contact({
   const light =
     "mt-5 w-screen h-screen flex flex-row flex-wrap justify-center items-center sticky top-0 bg-white text-slate-900 ";
   const dark =
-    "mt-5 w-screen h-screen flex flex-row flex-wrap justify-center items-center sticky top-0 dark:bg-slate-800 dark:text-white";
+    "mt-5 w-screen h-screen flex flex-row flex-wrap justify-center items-center sticky top-0 bg-slate-700 text-white";
+  const lightForm =
+    "rounded-2xl flex flex-col justify-start h-4/5 w-96  ml-3 mr-3 text-white bg-slate-600";
+  const darkForm =
+    "rounded-2xl flex flex-col justify-start h-4/5 w-96  ml-3 mr-3 text-slate-900  bg-gray-50";
   return (
     <body id="Contact" className={bgMode ? light : dark}>
       {screenPercent > 2.97 ? (
         <aside
           onClick={() => window.scrollTo(0, 0)}
-          className="w-full text-center"
+          className="w-full text-center cursor-pointer"
         >
-          Arrow Here
+          <p>Back to the top</p>
         </aside>
       ) : (
         <aside className="w-full text-center text-transparent">
@@ -82,10 +86,7 @@ export default function Contact({
       >
         {response}
       </Modal>
-      <form
-        onSubmit={onSubmit}
-        className="rounded-2xl flex flex-col justify-start h-4/5 w-96 dark:bg-gray-50 ml-3 mr-3 text-white dark:text-slate-900 bg-slate-500"
-      >
+      <form onSubmit={onSubmit} className={bgMode ? lightForm : darkForm}>
         <h1 className="self-center mb-10">Contact me!</h1>
         <label className="ml-2">First Name</label>
         <input
@@ -134,7 +135,7 @@ export default function Contact({
           }}
         />
         <textarea
-          className="h-3/6 w-11/12 border-solid border-2 border-zinc-300 resize-none text-start self-center"
+          className="mt-3 h-3/6 w-11/12 border-solid border-2 border-zinc-300 resize-none text-start self-center"
           name="message"
           rows={10}
           value={formData.message}

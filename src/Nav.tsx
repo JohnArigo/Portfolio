@@ -3,6 +3,7 @@ import ScrollIntoView from "react-scroll-into-view";
 import { handleType } from "./types";
 import { contactTypes } from "./types";
 import { Switch } from "@mantine/core";
+
 export default function Nav({
   scrollSize,
   setScrollSize,
@@ -18,9 +19,10 @@ export default function Nav({
   ];
 
   return (
-    <body className="h-6 w-full fixed z-50 top-0 flex flex-row justify-end mr-10">
+    <body className="h-10 w-full fixed z-50 top-0 flex flex-row justify-end items-center mr-10">
       {screenPercent < 0.015 ? (
         <Switch
+          className="mr-5"
           onLabel="Dark"
           offLabel="Light"
           checked={bgMode}
