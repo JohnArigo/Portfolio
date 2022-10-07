@@ -8,12 +8,16 @@ import sql from "./images/sql-server.png";
 import c from "./images/C.svg";
 import { useEffect } from "react";
 import { portType } from "./types";
+import { ports } from "./types";
 
-export type ports = {
-  portSize: portType;
-  setPortSize: React.Dispatch<React.SetStateAction<portType>>;
-};
-export default function Experience({ portSize, setPortSize }: ports) {
+export default function Experience({
+  portSize,
+  setPortSize,
+  scrollSize,
+  setScrollSize,
+  screenPercent,
+  bgMode,
+}: ports) {
   useEffect(() => {
     function handleResize() {
       setPortSize({
@@ -24,6 +28,17 @@ export default function Experience({ portSize, setPortSize }: ports) {
 
     window.addEventListener("resize", handleResize);
   }, []);
+  useEffect(() => {
+    const handleScroll = (event: any) => {
+      setScrollSize?.(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const imageSize = () => {
     if (portSize.width < 600) {
@@ -32,14 +47,20 @@ export default function Experience({ portSize, setPortSize }: ports) {
       return "w-24 h-24";
     }
   };
+
+  const light =
+    "w-screen h-screen flex flex-col justify-end bg-white sticky top-0 text-slate-900";
+  const dark =
+    "w-screen h-screen flex flex-col justify-end sticky top-0 dark:bg-slate-800 dark:text-white";
+
   return (
-    <body className="w-screen h-screen flex flex-col justify-end bg-green-100 sticky top-0">
+    <body id="Experience" className={bgMode ? light : dark}>
       <main className="flex flex-row-reverse w-full h-1/2">
-        <section className="w-1/2 h-full">
+        <section className="w-1/2 h-full mr-3">
           <h1>About me</h1>
           <p>
             I am U.S. Air Force veteran and react developer with strong
-            problem-solving skills and a passion for learning.
+            problem-solving and communication skills.
           </p>
           <p>
             My focus is to learn and create fast, flexible, mobile-first
@@ -50,11 +71,11 @@ export default function Experience({ portSize, setPortSize }: ports) {
             learning about C#, transact-SQl and Azure Cloud Development
           </p>
         </section>
-        <section className="w-1/2 h-full flex flex-row justify-center bg-red-50">
+        <section className="w-1/2 h-full flex flex-row justify-center ">
           <img className="w-40 h-40" src={dev} />
         </section>
       </main>
-      <footer className="mb-10 w-full flex flex-col justify-start h-1/4 mt-5 bg-orange-50 self-center">
+      <footer className="mb-10 w-full flex flex-col justify-start h-1/4 mt-10 self-center">
         <h1 className="self-center mt-5">Skills</h1>
         <section className="flex flex-row justify-center w-full">
           <div>
@@ -82,6 +103,17 @@ export default function Experience({ portSize, setPortSize }: ports) {
             <img className={imageSize()} src={css} />
           </div>
         </section>
+        {screenPercent > 1.005 ? (
+          <a href="#Projects">
+            <section className="mb-3 w-full text-center">
+              Arrow Goes Here
+            </section>
+          </a>
+        ) : (
+          <section className="text-transparent mb-3">
+            This is a placer holder
+          </section>
+        )}
       </footer>
     </body>
   );

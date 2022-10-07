@@ -1,8 +1,14 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Modal } from "@mantine/core";
 import emailjs from "@emailjs/browser";
+import { contactTypes } from "./types";
 
-export default function Contact() {
+export default function Contact({
+  scrollSize,
+  setScrollSize,
+  screenPercent,
+  bgMode,
+}: contactTypes) {
   type formDataType = {
     firstName: string;
     lastName: string;
@@ -50,9 +56,24 @@ export default function Contact() {
         setResponse("Error!, please try again" + error);
       });
   };
-
+  const light =
+    "mt-5 w-screen h-screen flex flex-row flex-wrap justify-center items-center sticky top-0 bg-white text-slate-900 ";
+  const dark =
+    "mt-5 w-screen h-screen flex flex-row flex-wrap justify-center items-center sticky top-0 dark:bg-slate-800 dark:text-white";
   return (
-    <body className="mt-5 w-screen h-screen flex flex-row justify-center items-center sticky top-0 bg-rose-900">
+    <body id="Contact" className={bgMode ? light : dark}>
+      {screenPercent > 2.97 ? (
+        <aside
+          onClick={() => window.scrollTo(0, 0)}
+          className="w-full text-center"
+        >
+          Arrow Here
+        </aside>
+      ) : (
+        <aside className="w-full text-center text-transparent">
+          This is a Place holder
+        </aside>
+      )}
       <Modal
         className="text-center"
         opened={modalState}
@@ -63,10 +84,10 @@ export default function Contact() {
       </Modal>
       <form
         onSubmit={onSubmit}
-        className="flex flex-col justify-start h-4/5 w-96 bg-white"
+        className="rounded-2xl flex flex-col justify-start h-4/5 w-96 dark:bg-gray-50 ml-3 mr-3 text-white dark:text-slate-900 bg-slate-500"
       >
         <h1 className="self-center mb-10">Contact me!</h1>
-        <label>First Name</label>
+        <label className="ml-2">First Name</label>
         <input
           className="h-10 shadow-xl w-5/6 self-center border-gray-100 border-2"
           type="text"
@@ -76,7 +97,7 @@ export default function Contact() {
           required
           onChange={(event) => handleChange(event)}
         />
-        <label>Last Name</label>
+        <label className="ml-2">Last Name</label>
         <input
           className="h-10 shadow-xl w-5/6 self-center border-gray-100 border-2"
           type="text"
@@ -86,7 +107,7 @@ export default function Contact() {
           required
           onChange={(event) => handleChange(event)}
         />
-        <label>E-mail Address</label>
+        <label className="ml-2">E-mail Address</label>
         <input
           className="h-10 shadow-xl w-5/6 self-center border-gray-100 border-2"
           type="email"
@@ -96,7 +117,7 @@ export default function Contact() {
           required
           onChange={(event) => handleChange(event)}
         />
-        <label>Phone Number (Optional)</label>
+        <label className="ml-2">Phone Number (Optional)</label>
         <input
           className="h-10 shadow-xl w-5/6 self-center border-gray-100 border-2 mb-2"
           type="tel"

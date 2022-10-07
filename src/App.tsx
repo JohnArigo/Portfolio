@@ -4,7 +4,7 @@ import Contact from "./Contact";
 import Experience from "./Experience";
 import Projects from "./Projects";
 import Title from "./Title";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { portType } from "./types";
 
 function App() {
@@ -12,15 +12,49 @@ function App() {
     width: window.innerWidth,
     height: window.innerHeight,
   });
-
+  const [scrollSize, setScrollSize] = useState<number>(0);
+  const screenPercent = scrollSize / portSize.height;
+  const [bgMode, setBgMode] = useState(false);
   return (
-    <body>
-      <Nav />
-      <Title portSize={portSize} setPortSize={setPortSize} />
-      <Experience portSize={portSize} setPortSize={setPortSize} />
-      <Projects portSize={portSize} setPortSize={setPortSize} />
-      <Contact />
-    </body>
+    <>
+      <Nav
+        scrollSize={scrollSize}
+        setScrollSize={setScrollSize}
+        screenPercent={screenPercent}
+        bgMode={bgMode}
+        setBgMode={setBgMode}
+      />
+      <Title
+        scrollSize={scrollSize}
+        setScrollSize={setScrollSize}
+        portSize={portSize}
+        setPortSize={setPortSize}
+        screenPercent={screenPercent}
+        bgMode={bgMode}
+      />
+      <Experience
+        scrollSize={scrollSize}
+        setScrollSize={setScrollSize}
+        portSize={portSize}
+        setPortSize={setPortSize}
+        screenPercent={screenPercent}
+        bgMode={bgMode}
+      />
+      <Projects
+        scrollSize={scrollSize}
+        setScrollSize={setScrollSize}
+        portSize={portSize}
+        setPortSize={setPortSize}
+        screenPercent={screenPercent}
+        bgMode={bgMode}
+      />
+      <Contact
+        scrollSize={scrollSize}
+        setScrollSize={setScrollSize}
+        screenPercent={screenPercent}
+        bgMode={bgMode}
+      />
+    </>
   );
 }
 
