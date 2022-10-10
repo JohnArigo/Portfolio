@@ -7,7 +7,7 @@ import typescript from "./images/typescript.svg";
 import sql from "./images/sql-server.png";
 import c from "./images/C.svg";
 import { useEffect } from "react";
-import { portType } from "./types";
+
 import { ports } from "./types";
 import downArrowBlack from "./images/downArrowBlack.png";
 import downArrowGradient from "./images/downArrowGradient.png";

@@ -1,6 +1,3 @@
-import { useRef } from "react";
-import ScrollIntoView from "react-scroll-into-view";
-import { handleType } from "./types";
 import { contactTypes } from "./types";
 import { Switch } from "@mantine/core";
 

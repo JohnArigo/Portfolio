@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { Modal } from "@mantine/core";
 import emailjs from "@emailjs/browser";
-import { contactTypes, ports, portType } from "./types";
+import { ports } from "./types";
 import githubR from "./images/githubR.png";
 import facebook from "./images/facebook.png";
 import linkedIn from "./images/linkedIn.svg";

@@ -60,7 +60,7 @@ export default function Title({
   const mainLight = "flex flex-row h-5/6 w-full justify-end items-end";
   const mainDark = "flex flex-row h-5/6 w-full items-start";
   return (
-    <body id="Title" className={bgMode ? light : dark()}>
+    <body id="home" className={bgMode ? light : dark()}>
       {portSize.width > 600 && bgMode ? (
         <div className="bg-gray-50 w-1/2 flex justify-start px-16">
           <div className="relative max-w-lg">
