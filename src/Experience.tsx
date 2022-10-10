@@ -82,7 +82,7 @@ export default function Experience({
           <img className="w-40 h-40" src={dev} />
         </section>
       </main>
-      <footer className=" w-full flex flex-col justify-start h-1/4 self-center">
+      <footer className="mt-10 w-full flex flex-col justify-start h-1/4 self-center">
         <h1 className="self-center mt-10">Skills</h1>
         <section className="flex flex-row justify-center w-full">
           <div>
