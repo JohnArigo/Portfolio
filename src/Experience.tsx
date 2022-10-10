@@ -62,7 +62,7 @@ export default function Experience({
 
   return (
     <body id="Experience" className={bgMode ? light : dark()}>
-      <main className="flex flex-row-reverse w-full h-1/2 mt-10">
+      <main className="flex flex-row-reverse w-full h-1/2 mt-10 text-sm">
         <section className="w-1/2 h-3/4 mr-3">
           <h1 className="font-noto font-semibold text-xl">About me</h1>
           <p>
@@ -82,7 +82,7 @@ export default function Experience({
           <img className="w-40 h-40" src={dev} />
         </section>
       </main>
-      <footer className="mt-10 w-full flex flex-col justify-start h-1/4 self-center">
+      <footer className=" w-full flex flex-col justify-start h-1/4 self-center">
         <h1 className="self-center mt-10">Skills</h1>
         <section className="flex flex-row justify-center w-full">
           <div>
