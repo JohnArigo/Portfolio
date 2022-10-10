@@ -52,33 +52,38 @@ export default function Experience({
 
   const light =
     "w-screen h-screen flex flex-col justify-center bg-white sticky top-0 text-slate-900";
-  const dark =
-    "w-screen h-screen flex flex-col justify-center sticky top-0 bg-slate-700 text-white";
+
+  const dark = () => {
+    if (portSize.width > 600) {
+      return "w-screen h-screen flex flex-col justify-center sticky top-0 bg-zinc-900 text-white font-noto";
+    } else
+      return "w-screen h-screen flex flex-col justify-start sticky top-0 bg-zinc-800 text-white font-noto";
+  };
 
   return (
-    <body id="Experience" className={bgMode ? light : dark}>
-      <main className="flex flex-row-reverse w-full h-1/2">
-        <section className="w-1/2 h-full mr-3">
-          <h1>About me</h1>
+    <body id="Experience" className={bgMode ? light : dark()}>
+      <main className="flex flex-row-reverse w-full h-1/2 mt-10">
+        <section className="w-1/2 h-3/4 mr-3">
+          <h1 className="font-noto font-semibold text-xl">About me</h1>
           <p>
-            I am U.S. Air Force veteran and react developer with strong
-            problem-solving and communication skills.
+            I'm a veteran and react developer with strong problem-solving and
+            communication skills.
           </p>
           <p>
             My focus is to learn and create fast, flexible, mobile-first
             applications.
           </p>
           <p>
-            I am currently within the Microsoft Software Systems Academy
-            learning about C#, transact-SQl and Azure Cloud Development
+            Currently a student of Microsoft Software Systems Academy learning
+            about C#, transact-SQl and Azure Cloud Development
           </p>
         </section>
-        <section className="w-1/2 h-full flex flex-row justify-center ">
+        <section className="w-1/2 h-3/4 flex flex-row justify-center ">
           <img className="w-40 h-40" src={dev} />
         </section>
       </main>
       <footer className=" w-full flex flex-col justify-start h-1/4 self-center">
-        <h1 className="self-center mt-5">Skills</h1>
+        <h1 className="self-center mt-10">Skills</h1>
         <section className="flex flex-row justify-center w-full">
           <div>
             <img className={imageSize()} src={typescript} />
@@ -105,7 +110,7 @@ export default function Experience({
             <img className={imageSize()} src={css} />
           </div>
         </section>
-        {screenPercent > 1.005 ? (
+        {screenPercent >= 1.0 ? (
           <section className="mt-7 w-full flex flex-row justify-center items-start animate-bounce">
             {bgMode ? (
               <a href="#Projects">

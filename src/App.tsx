@@ -15,6 +15,7 @@ function App() {
   const [scrollSize, setScrollSize] = useState<number>(0);
   const screenPercent = scrollSize / portSize.height;
   const [bgMode, setBgMode] = useState(false);
+
   return (
     <>
       <Nav
@@ -49,6 +50,8 @@ function App() {
         bgMode={bgMode}
       />
       <Contact
+        portSize={portSize}
+        setPortSize={setPortSize}
         scrollSize={scrollSize}
         setScrollSize={setScrollSize}
         screenPercent={screenPercent}

@@ -1,14 +1,19 @@
 import { useState, useRef } from "react";
 import { Modal } from "@mantine/core";
 import emailjs from "@emailjs/browser";
-import { contactTypes } from "./types";
+import { contactTypes, ports, portType } from "./types";
+import githubR from "./images/githubR.png";
+import facebook from "./images/facebook.png";
+import linkedIn from "./images/linkedIn.svg";
 
 export default function Contact({
+  portSize,
+  setPortSize,
   scrollSize,
   setScrollSize,
   screenPercent,
   bgMode,
-}: contactTypes) {
+}: ports) {
   type formDataType = {
     firstName: string;
     lastName: string;
@@ -56,25 +61,31 @@ export default function Contact({
         setResponse("Error!, please try again" + error);
       });
   };
+
   const light =
-    "mt-5 w-screen h-screen flex flex-row flex-wrap justify-center items-center sticky top-0 bg-white text-slate-900 ";
-  const dark =
-    "mt-5 w-screen h-screen flex flex-row flex-wrap justify-center items-center sticky top-0 bg-slate-700 text-white";
+    " w-screen h-screen flex flex-col flex-wrap justify-center items-center sticky top-0 bg-white text-slate-900 font-noto";
+  const dark = () => {
+    if (portSize.width > 600) {
+      return "  w-screen h-screen flex flex-col flex-wrap justify-center items-center sticky top-0 bg-zinc-900 text-white font-noto";
+    } else
+      return "  w-screen h-screen flex flex-col flex-wrap justify-center items-center sticky top-0 bg-zinc-800 text-white font-noto";
+  };
+
   const lightForm =
-    "rounded-2xl flex flex-col justify-start h-4/5 w-96  ml-3 mr-3 text-white bg-slate-600";
+    "self-center rounded-2xl flex flex-col justify-start h-4/6 w-96  ml-1 mr-3 mb-5 text-white bg-zinc-800";
   const darkForm =
-    "rounded-2xl flex flex-col justify-start h-4/5 w-96  ml-3 mr-3 text-slate-900  bg-gray-50";
+    "self-center rounded-2xl flex flex-col justify-start h-4/6 w-96 ml-1 mr-3 mb-5 text-slate-900  bg-gray-50";
   return (
-    <body id="Contact" className={bgMode ? light : dark}>
+    <body id="Contact" className={bgMode ? light : dark()}>
       {screenPercent > 2.97 ? (
         <aside
           onClick={() => window.scrollTo(0, 0)}
-          className="w-full text-center cursor-pointer"
+          className="cursor-pointer mb-3"
         >
-          <p>Back to the top</p>
+          Back to the top
         </aside>
       ) : (
-        <aside className="w-full text-center text-transparent">
+        <aside className="w-full text-center text-transparent mb-5">
           This is a Place holder
         </aside>
       )}
@@ -146,11 +157,28 @@ export default function Contact({
 
         <button
           onClick={() => setModalState(true)}
-          className=" mt-5 bg-stone-200 shadow-sm self-center text-black w-5/12 h-10 rounded-lg mb-3"
+          className=" mt-5 bg-stone-200 shadow-sm self-center text-black w-5/12 h-10 rounded-lg"
         >
           Submit
         </button>
       </form>
+      <footer className="flex flex-row">
+        <div className="mt-1 mr-5">
+          <a href="https://github.com/raggedyragz">
+            <img src={githubR} />
+          </a>
+        </div>
+        <div className="flex justify-center items-center mr-5">
+          <a href="https://www.facebook.com/john.arigo.39/">
+            <img className="w-14 h-14" src={facebook} />
+          </a>
+        </div>
+        <div className="flex justify-center items-center">
+          <a href="https://www.linkedin.com/in/john-arigo/">
+            <img className="w-14 h-14" src={linkedIn} />
+          </a>
+        </div>
+      </footer>
     </body>
   );
 }

@@ -28,29 +28,45 @@ export default function Projects({
     window.addEventListener("resize", handleResize);
   }, []);
   const light =
-    "w-screen h-screen flex flex-col items-center justify-start sticky top-0 bg-white text-slate-900 ";
-  const dark =
-    "w-screen h-screen flex flex-col items-center justify-start sticky top-0 bg-slate-900 text-white";
+    "w-screen h-screen flex flex-col items-center justify-start sticky top-0 bg-gray-50 text-slate-900 font-noto";
+
+  const dark = () => {
+    if (portSize.width > 600) {
+      return "w-screen h-screen flex flex-col items-center justify-start sticky top-0 bg-zinc-800 text-white font-noto";
+    } else
+      return "w-screen h-screen flex flex-col items-center justify-start sticky top-0 bg-zinc-900 text-white font-noto";
+  };
 
   const lightCarousel =
     "w-full h-4/6 mt-5 flex flex-row justify-center items-center bg-gray-50 ";
   const darkCarousel =
     "w-full h-4/6 mt-5 flex flex-row justify-center items-center ";
   return (
-    <body id="Projects" className={bgMode ? light : dark}>
-      <h1 className="h-1/6 text-3xl w-full text-center  self-start">
+    <body id="Projects" className={bgMode ? light : dark()}>
+      <h1 className="h-1/6 mt-5 text-xl w-full text-center  self-start">
         Here are my latest projects
       </h1>
       <section className={bgMode ? lightCarousel : darkCarousel}>
         <Carousel
           className="w-full"
-          slideSize="75%"
+          slideSize="70%"
           height={400}
           slideGap="lg"
           controlsOffset="lg"
           controlSize={30}
           loop
           withIndicators
+          styles={{
+            indicator: {
+              width: 12,
+              height: 4,
+              transition: "width 250ms ease",
+
+              "&[data-active]": {
+                width: 40,
+              },
+            },
+          }}
         >
           <Carousel.Slide className="flex flex-row justify-center">
             <a href="https://raggedyragz.github.io/shopping-app/">
@@ -81,7 +97,7 @@ export default function Projects({
           </Carousel.Slide>
         </Carousel>
       </section>
-      {screenPercent > 2.005 ? (
+      {screenPercent >= 2.0 ? (
         <section className="mt-10 w-full h-1/6 flex flex-row justify-center items-center animate-bounce">
           {bgMode ? (
             <a href="#Contact">
