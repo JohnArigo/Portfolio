@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.08136af2.css",
-    "main.js": "/portfolio/static/js/main.ba5b76a4.js",
+    "main.js": "/portfolio/static/js/main.95614fbe.js",
     "static/media/shoppingFull.png": "/portfolio/static/media/shoppingFull.85161038cf74301c0fcd.png",
     "static/media/weatherFull.png": "/portfolio/static/media/weatherFull.c8f6d689081778788ca5.png",
     "static/media/weather.png": "/portfolio/static/media/weather.a4cada11de46b6799d8b.png",
@@ -21,10 +21,10 @@
     "static/media/css.svg": "/portfolio/static/media/css.db7dfd1247623e1e9223d8ef28a37432.svg",
     "static/media/html.svg": "/portfolio/static/media/html.a026abbb678246d70ee9b70e4aee972c.svg",
     "main.08136af2.css.map": "/portfolio/static/css/main.08136af2.css.map",
-    "main.ba5b76a4.js.map": "/portfolio/static/js/main.ba5b76a4.js.map"
+    "main.95614fbe.js.map": "/portfolio/static/js/main.95614fbe.js.map"
   },
   "entrypoints": [
     "static/css/main.08136af2.css",
-    "static/js/main.ba5b76a4.js"
+    "static/js/main.95614fbe.js"
   ]
 }
