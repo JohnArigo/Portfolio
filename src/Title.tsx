@@ -2,7 +2,7 @@ import { ports } from "./types";
 import { useEffect } from "react";
 import downArrowBlack from "./images/downArrowBlack.png";
 import downArrowGradient from "./images/downArrowGradient.png";
-
+import { Typewriter } from "react-simple-typewriter";
 export default function Title({
   portSize,
   setPortSize,
@@ -51,9 +51,9 @@ export default function Title({
 
   const textDark = () => {
     if (portSize.width > 600) {
-      return "w-full h-1/2 flex flex-col justify-center items-center text-2xl font-noto font-medium ";
+      return "w-full h-1/2 flex flex-col justify-center items-center text-3xl font-noto font-medium ";
     } else {
-      return "w-full h-full flex flex-col justify-center items-center text-2xl font-noto font-medium ";
+      return "w-full h-full flex flex-col justify-center items-center text-xl font-noto font-bold ";
     }
   };
 
@@ -76,8 +76,22 @@ export default function Title({
             Hello, my name is John Arigo
           </h1>
           <h3 className="self-center text-center text-lg mt-5">
-            I am an aspiring Software Engineer with passion to learn and
-            innovate!
+            I am{" "}
+            <Typewriter
+              words={[
+                "a Software Engineer",
+                "a Veteran",
+                "a Student",
+                "an Innovator",
+                "a Proud Dad",
+              ]}
+              cursor
+              cursorColor="red"
+              cursorStyle="_"
+              loop={Infinity}
+              typeSpeed={90}
+              deleteSpeed={50}
+            />
           </h3>
         </main>
       </section>

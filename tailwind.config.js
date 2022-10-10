@@ -6,6 +6,9 @@ module.exports = {
       backgroundImage: {
         macbook: "url('./images/bgPhotoDark.avif')",
         Book: "url('./images/bgImageDark.avif')",
+        shopping: "url('./images/shoppingFull.png')",
+        notes: "url('./images/notesFull.png')",
+        weather: "url('./images/weatherFull.png')",
       },
       fontFamily: {
         noto: ["'Noto Sans Mono'", "monospace"],
