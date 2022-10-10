@@ -1,7 +1,7 @@
 {
   "name": "website",
   "version": "0.1.0",
-  "homepage": "https://raggedyragz.github.io/portfolio",
+  "homepage": "https://raggedyragz.github.io/Portfolio",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.7.0",
