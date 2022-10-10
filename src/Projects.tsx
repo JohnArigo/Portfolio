@@ -71,7 +71,22 @@ export default function Projects({
           <Carousel.Slide className="flex flex-row justify-center">
             <a href="https://raggedyragz.github.io/shopping-app/">
               {portSize.width > 600 ? (
-                <img className="" src={shoppingFull} />
+                <div className="relative text-transparent hover:text-zinc-800">
+                  <img className="hover:blur-md" src={shoppingFull} />
+                  <h1 className="absolute text-sm top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    Object manipulation! This app was really challening. I had
+                    to conceptualize the essentials of an e-commerence app and
+                    translate it to how I can display it using react. I called
+                    the Fake Store API to display products in individual cards.
+                    Utilized filtering for user end sorting/filtering. It can be
+                    by categories, name or price. Creating a new object child to
+                    store quantity for the shopping cart to be checked out. I
+                    also created basic form validation and formatting. Lastly, I
+                    created a functional feedback form that sends an email to
+                    designated address using EmailJS. Utilized JS/React, HTML5,
+                    CSS3/Tailwind
+                  </h1>
+                </div>
               ) : (
                 <img className="h-96 w-56 shadow-lg" src={shop} />
               )}
@@ -80,7 +95,19 @@ export default function Projects({
           <Carousel.Slide className="flex flex-row justify-center">
             <a href="https://raggedyragz.github.io/weather-app/">
               {portSize.width > 600 ? (
-                <img className="" src={weatherFull} />
+                <div className="relative text-transparent hover:text-zinc-800">
+                  <img className="hover:blur-md" src={weatherFull} />
+                  <h1 className="absolute text-sm top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    The app I learned typescript on. Using
+                    Typescript/HTML5/CSS3/Tailwind This app helped me learn the
+                    essentials of matching types and declaring them. I really
+                    enjoyed the OpenWeather API for its ease of use and great
+                    documentation. I learned a lot about styling cards with this
+                    componenet and the functionality of flexbox and tailwind
+                    API. This App displays current weather and future weather up
+                    to 5 days! You can find each city by zipcode.
+                  </h1>
+                </div>
               ) : (
                 <img className=" shadow-lg h-96 w-56" src={weather} />
               )}
@@ -89,7 +116,17 @@ export default function Projects({
           <Carousel.Slide className="flex flex-row justify-center">
             <a href="https://l5ot6e.csb.app/">
               {portSize.width > 600 ? (
-                <img className="" src={notesFull} />
+                <div className="relative text-white hover:text-zinc-800">
+                  <img className=" hover:blur-md" src={notesFull} />
+                  <h1 className="absolute text-sm top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    My first app! It is made with JS/React, HTML5 and CSS3.
+                    Practiced CRUD, state and data manipulation. Stores notes on
+                    local storage. Created in codesandbox. This project helped
+                    me visualize and understand how props and state can be
+                    passed throughout each component and how to edit, add and
+                    delete items within an array.
+                  </h1>
+                </div>
               ) : (
                 <img className=" shadow-lg h-96 w-56" src={notes} />
               )}
