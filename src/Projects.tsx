@@ -2,6 +2,7 @@ import { Carousel } from "@mantine/carousel";
 import shop from "./images/shop.png";
 import weather from "./images/weather.png";
 import notes from "./images/notes.png";
+import chat from "./images/chat.png";
 import shoppingFull from "./images/shoppingFull.png";
 import weatherFull from "./images/weatherFull.png";
 import notesFull from "./images/notesFull.png";
@@ -68,6 +69,31 @@ export default function Projects({
             },
           }}
         >
+          <Carousel.Slide className="flex flex-row justify-center">
+            <a href="https://chat-appplication.vercel.app/">
+              {portSize.width > 600 ? (
+                <div className="h-full w-full flex justify-center items-center text-transparent hover:text-zinc-800 sm:bg-chat bg-cover">
+                  <div className="flex justify-center items-center text-sm h-full w-full hover:backdrop-blur-md">
+                    <h1>
+                      Object manipulation! This app was really challening. I had
+                      to conceptualize the essentials of an e-commerence app and
+                      translate it to how I can display it using react. I called
+                      the Fake Store API to display products in individual
+                      cards. Utilized filtering for user end sorting/filtering.
+                      It can be by categories, name or price. Creating a new
+                      object child to store quantity for the shopping cart to be
+                      checked out. I also created basic form validation and
+                      formatting. Lastly, I created a functional feedback form
+                      that sends an email to designated address using EmailJS.
+                      Utilized JS/React, HTML5, CSS3/Tailwind
+                    </h1>
+                  </div>
+                </div>
+              ) : (
+                <img className="h-96 w-56 shadow-lg" src={chat} />
+              )}
+            </a>
+          </Carousel.Slide>
           <Carousel.Slide className="flex flex-row justify-center">
             <a href="https://raggedyragz.github.io/shopping-app/">
               {portSize.width > 600 ? (

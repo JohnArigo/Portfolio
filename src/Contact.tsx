@@ -3,7 +3,7 @@ import { Modal } from "@mantine/core";
 import emailjs from "@emailjs/browser";
 import { ports } from "./types";
 import githubR from "./images/githubR.png";
-import facebook from "./images/facebook.png";
+import whiteGit from "./images/gitWhite.png";
 import linkedIn from "./images/linkedIn.svg";
 
 export default function Contact({
@@ -163,16 +163,20 @@ export default function Contact({
         </button>
       </form>
       <footer className="flex flex-row">
-        <div className="mt-1 mr-5">
-          <a href="https://github.com/raggedyragz">
-            <img src={githubR} />
-          </a>
-        </div>
-        <div className="flex justify-center items-center mr-5">
-          <a href="https://www.facebook.com/john.arigo.39/">
-            <img className="w-14 h-14" src={facebook} />
-          </a>
-        </div>
+        {bgMode ? (
+          <div className="mt-1 mr-8">
+            <a href="https://github.com/raggedyragz">
+              <img className="w-12 h-12" src={githubR} />
+            </a>
+          </div>
+        ) : (
+          <div className="mt-1 mr-8">
+            <a href="https://github.com/raggedyragz">
+              <img className="w-12 h-12" src={whiteGit} />
+            </a>
+          </div>
+        )}
+
         <div className="flex justify-center items-center">
           <a href="https://www.linkedin.com/in/john-arigo/">
             <img className="w-14 h-14" src={linkedIn} />
