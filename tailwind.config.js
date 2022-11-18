@@ -9,7 +9,7 @@ module.exports = {
         shopping: "url('./images/shoppingFull.png')",
         notes: "url('./images/notesFull.png')",
         weather: "url('./images/weatherFull.png')",
-        chat: "url('./images/chatFull.png')",
+        social: "url('./images/social-full.png')",
       },
       fontFamily: {
         noto: ["'Noto Sans Mono'", "monospace"],

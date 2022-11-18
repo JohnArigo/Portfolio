@@ -2,7 +2,7 @@ import { Carousel } from "@mantine/carousel";
 import shop from "./images/shop.png";
 import weather from "./images/weather.png";
 import notes from "./images/notes.png";
-import chat from "./images/chat.png";
+import social from "./images/social.png";
 import shoppingFull from "./images/shoppingFull.png";
 import weatherFull from "./images/weatherFull.png";
 import notesFull from "./images/notesFull.png";
@@ -70,11 +70,11 @@ export default function Projects({
           }}
         >
           <Carousel.Slide className="flex flex-row justify-center">
-            <a href="https://chat-appplication.vercel.app/">
+            <a href="https://johnpauloarigo.com/">
               {portSize.width > 600 ? (
-                <div className="h-full w-full flex justify-center items-center text-transparent hover:text-zinc-800 sm:bg-chat bg-cover">
+                <div className="h-full w-full flex justify-center items-center text-transparent hover:text-zinc-800 sm:bg-social-full bg-cover">
                   <div className="flex justify-center items-center text-sm h-full w-full hover:backdrop-blur-md">
-                    <h1>
+                    {/* <h1>
                       Object manipulation! This app was really challening. I had
                       to conceptualize the essentials of an e-commerence app and
                       translate it to how I can display it using react. I called
@@ -86,16 +86,16 @@ export default function Projects({
                       formatting. Lastly, I created a functional feedback form
                       that sends an email to designated address using EmailJS.
                       Utilized JS/React, HTML5, CSS3/Tailwind
-                    </h1>
+                    </h1> */}
                   </div>
                 </div>
               ) : (
-                <img className="h-96 w-56 shadow-lg" src={chat} />
+                <img className="h-96 w-56 shadow-lg" src={social} />
               )}
             </a>
           </Carousel.Slide>
           <Carousel.Slide className="flex flex-row justify-center">
-            <a href="https://raggedyragz.github.io/shopping-app/">
+            <a href="https://johnarigo.github.io/shopping-app/">
               {portSize.width > 600 ? (
                 <div className="h-full w-full flex justify-center items-center text-transparent hover:text-zinc-800 sm:bg-shopping bg-cover">
                   <div className="flex justify-center items-center text-sm h-full w-full hover:backdrop-blur-md">
@@ -120,7 +120,7 @@ export default function Projects({
             </a>
           </Carousel.Slide>
           <Carousel.Slide className="flex flex-row justify-center">
-            <a href="https://raggedyragz.github.io/weather-app/">
+            <a href="https://johnarigo.github.io/weather-app/">
               {portSize.width > 600 ? (
                 <div className="h-full w-full flex justify-center items-center text-transparent hover:text-zinc-800 sm:bg-weather bg-cover">
                   <div className="flex justify-center items-center text-sm h-full w-full hover:backdrop-blur-md">
