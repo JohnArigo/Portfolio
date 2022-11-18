@@ -7,9 +7,10 @@ import shoppingFull from "./images/shoppingFull.png";
 import weatherFull from "./images/weatherFull.png";
 import notesFull from "./images/notesFull.png";
 import { ports } from "./types";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import downArrowBlack from "./images/downArrowBlack.png";
 import downArrowGradient from "./images/downArrowGradient.png";
+import { Button, Drawer, Popover } from "@mantine/core";
 
 export default function Projects({
   portSize,
@@ -42,6 +43,11 @@ export default function Projects({
     "w-full h-4/6 mt-5 flex flex-row justify-center items-center bg-gray-50 ";
   const darkCarousel =
     "w-full h-4/6 mt-5 flex flex-row justify-center items-center ";
+
+  const [c1, setC1] = useState<boolean>(false);
+  const [c2, setC2] = useState<boolean>(false);
+  const [c3, setC3] = useState<boolean>(false);
+  const [c4, setC4] = useState<boolean>(false);
   return (
     <body id="Projects" className={bgMode ? light : dark()}>
       <h1 className="h-1/6 mt-5 text-xl w-full text-center font-bold self-start">
@@ -51,7 +57,7 @@ export default function Projects({
         <Carousel
           className="w-full"
           slideSize="70%"
-          height={400}
+          height={475}
           slideGap="lg"
           controlsOffset="lg"
           controlSize={30}
@@ -72,9 +78,13 @@ export default function Projects({
           <Carousel.Slide className="flex flex-row justify-center">
             <a href="https://johnpauloarigo.com/">
               {portSize.width > 600 ? (
-                <div className="h-full w-full flex justify-center items-center text-transparent hover:text-zinc-800 sm:bg-social bg-cover">
-                  <div className="flex justify-center items-center text-sm h-full w-full hover:backdrop-blur-md">
-                    <h1>
+                <div className="h-full w-full">
+                  <h1 className="h-1/6">
+                    Language, Tools, and Libraries: NextJS, TypeScript, React,
+                    NodeJS, Prisma, MySQL, PlanetScale, Tailwind CSS
+                  </h1>
+                  <div className="h-5/6 w-full flex justify-center items-center text-transparent hover:text-zinc-800 sm:bg-social bg-cover">
+                    <h1 className="text-transparent">
                       Object manipulation! This app was really challening. I had
                       to conceptualize the essentials of an e-commerence app and
                       translate it to how I can display it using react. I called
@@ -97,9 +107,13 @@ export default function Projects({
           <Carousel.Slide className="flex flex-row justify-center">
             <a href="https://johnarigo.github.io/shopping-app/">
               {portSize.width > 600 ? (
-                <div className="h-full w-full flex justify-center items-center text-transparent hover:text-zinc-800 sm:bg-shopping bg-cover">
-                  <div className="flex justify-center items-center text-sm h-full w-full hover:backdrop-blur-md">
-                    <h1>
+                <div className="h-full w-full">
+                  <h1 className="h-1/6">
+                    Language, Tools, and Libraries: JavaScript, React, Tailwind
+                    CSS, Mantine UI
+                  </h1>
+                  <div className="h-full w-full flex justify-center items-center text-transparent hover:text-zinc-800 sm:bg-shopping bg-cover">
+                    <h1 className="text-transparent">
                       Object manipulation! This app was really challening. I had
                       to conceptualize the essentials of an e-commerence app and
                       translate it to how I can display it using react. I called
@@ -122,9 +136,13 @@ export default function Projects({
           <Carousel.Slide className="flex flex-row justify-center">
             <a href="https://johnarigo.github.io/weather-app/">
               {portSize.width > 600 ? (
-                <div className="h-full w-full flex justify-center items-center text-transparent hover:text-zinc-800 sm:bg-weather bg-cover">
-                  <div className="flex justify-center items-center text-sm h-full w-full hover:backdrop-blur-md">
-                    <h1>
+                <div className="h-full w-full">
+                  <h1 className="h-1/6">
+                    Language, Tools, and Libraries: TypeScript, React, Tailwind
+                    CSS, APIs, OpenWeatherMap
+                  </h1>
+                  <div className="h-full w-full flex justify-center items-center text-transparent hover:text-zinc-800 sm:bg-weather bg-cover">
+                    <h1 className="text-transparent">
                       The app I learned typescript on. Using
                       Typescript/HTML5/CSS3/Tailwind This app helped me learn
                       the essentials of matching types and declaring them. I
@@ -144,9 +162,13 @@ export default function Projects({
           <Carousel.Slide className="flex flex-row justify-center">
             <a href="https://l5ot6e.csb.app/">
               {portSize.width > 600 ? (
-                <div className="h-full w-full flex justify-center items-center text-transparent hover:text-zinc-800 sm:bg-notes bg-cover">
-                  <div className="flex justify-center items-center text-sm h-full w-full hover:backdrop-blur-md">
-                    <h1>
+                <div className="h-full w-full">
+                  <h1 className="h-1/6">
+                    Language, Tools, and Libraries: JavaScript, React, Tailwind
+                    CSS, Mantine UI
+                  </h1>
+                  <div className="h-full w-full flex justify-center items-center text-transparent hover:text-zinc-800 sm:bg-notes bg-cover">
+                    <h1 className="text-transparent">
                       My first app! It is made with JS/React, HTML5 and CSS3.
                       Practiced CRUD, state and data manipulation. Stores notes
                       on local storage. Created in codesandbox. This project
