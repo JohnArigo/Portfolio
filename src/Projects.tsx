@@ -72,9 +72,9 @@ export default function Projects({
           <Carousel.Slide className="flex flex-row justify-center">
             <a href="https://johnpauloarigo.com/">
               {portSize.width > 600 ? (
-                <div className="h-full w-full flex justify-center items-center text-transparent hover:text-zinc-800 sm:bg-social-full bg-cover">
+                <div className="h-full w-full flex justify-center items-center text-transparent hover:text-zinc-800 sm:bg-social bg-cover">
                   <div className="flex justify-center items-center text-sm h-full w-full hover:backdrop-blur-md">
-                    {/* <h1>
+                    <h1>
                       Object manipulation! This app was really challening. I had
                       to conceptualize the essentials of an e-commerence app and
                       translate it to how I can display it using react. I called
@@ -86,7 +86,7 @@ export default function Projects({
                       formatting. Lastly, I created a functional feedback form
                       that sends an email to designated address using EmailJS.
                       Utilized JS/React, HTML5, CSS3/Tailwind
-                    </h1> */}
+                    </h1>
                   </div>
                 </div>
               ) : (
