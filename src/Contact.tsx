@@ -171,7 +171,7 @@ export default function Contact({
           </div>
         ) : (
           <div className="mt-1 mr-8">
-            <a href="https://github.com/raggedyragz">
+            <a href="https://github.com/JohnArigo">
               <img className="w-12 h-12" src={whiteGit} />
             </a>
           </div>
