@@ -15,8 +15,7 @@ import { Button, Drawer, Popover } from "@mantine/core";
 export default function Projects({
   portSize,
   setPortSize,
-  scrollSize,
-  setScrollSize,
+
   screenPercent,
   bgMode,
 }: ports) {
