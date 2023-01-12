@@ -16,7 +16,7 @@ module.exports = {
       },
       animation: {
         blob: "blob 7s infinite",
-        "increase-width": "increaseWidth 4.5s ease-out",
+        "increase-width": "increaseWidth 2.9s ease-in-out",
       },
       keyframes: {
         blob: {
@@ -34,8 +34,9 @@ module.exports = {
           },
         },
         increaseWidth: {
-          0: { width: "0%", transform: "translateX(0.5)" },
-          "100%": { width: "100%", transform: "translateX(0.5)" },
+          0: { width: "100%", transform: "translateX(0.5)" },
+          "0.5%": { width: "0%", transform: "translateX(0.5)" },
+          "100%": { width: "100%" },
         },
       },
     },
