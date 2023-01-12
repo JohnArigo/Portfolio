@@ -12,6 +12,7 @@ export default function Title({
   screenPercent,
   bgMode,
   loading,
+  timer,
 }: ports) {
   useEffect(() => {
     function handleResize() {
@@ -64,7 +65,7 @@ export default function Title({
 
   return (
     <body id="home" className={bgMode ? light : dark()}>
-      {loading ? <Loader /> : null}
+      {loading ? <Loader timer={timer!} /> : null}
       {portSize.width > 600 && bgMode ? (
         <div className="bg-gray-50 w-1/2 flex justify-start px-16">
           <div className="relative max-w-lg">

@@ -10,6 +10,7 @@ export type ports = {
   screenPercent: number;
   bgMode: boolean;
   loading?: boolean;
+  timer?: number;
 };
 
 export type handleType = {
