@@ -43,14 +43,14 @@ export default function Experience({
 
   const imageSize = () => {
     if (portSize.width < 600) {
-      return "w-12 h-12";
+      return "w-20 h-20";
     } else {
       return "w-24 h-24";
     }
   };
 
   const light =
-    "w-screen h-screen flex flex-col justify-center bg-white sticky top-0 text-slate-900";
+    "w-screen h-screen flex flex-col justify-between bg-white sticky top-0 text-slate-900";
 
   const dark = () => {
     if (portSize.width > 600) {
@@ -67,14 +67,20 @@ export default function Experience({
   const string3 =
     " I'm a Full-Stack Web Developer with a BS in Computer Science and experience with Microsoft";
   const stringThree = string3.split("");
-
+  <div className="flex flex-row items-center">
+    <img
+      className={portSize.width < 600 ? "w-12 h-10" : "w-24 h-20"}
+      src={sql}
+    />
+  </div>;
+  const images = [typescript, javascript, react, css, html, sql, c];
   return (
     <body id="Experience" className={bgMode ? light : dark()}>
       <main className="mt-20 flex flex-col sm:flex-row items-center justify-center w-full h-1/3 text-sm">
-        <section className="sm:w-1/2 md:w-1/3 h-3/4 flex flex-row justify-center ">
+        <section className="sm:w-1/2 md:w-1/3 h-3/4 flex flex-row justify-center sm:justify-start mt-3 ">
           <img className="w-48 h-48 sm:h-72 sm:w-72" src={dev} />
         </section>{" "}
-        <section className="w-1/2 h-3/4 mr-3 sm:mt-0 mt-5  cursor-default space-y-5 text-md sm:text-lg">
+        <section className="w-3/4 sm:w-1/2 lg:w-1/3 h-3/4 sm:mt-0 mt-5  cursor-default space-y-5 text-md sm:text-lg ">
           <h1 className="font-noto font-semibold text-3xl sm:text-start text-center">
             About me
           </h1>
@@ -121,33 +127,26 @@ export default function Experience({
           </p>
         </section>
       </main>
-      <footer className="mb-24 w-full flex flex-col justify-center h-1/4 self-center">
+      <footer className="mb-14 sm:mb-24 w-5/6 flex flex-col justify-center h-1/4 self-center">
         <h1 className="self-center mt-10">Skills</h1>
         <section className="flex flex-row justify-center w-full">
-          <div>
-            <img className={imageSize()} src={typescript} />
-          </div>
-          <div>
-            <img className={imageSize()} src={javascript} />
-          </div>
-          <div>
-            <img className={imageSize()} src={react} />
-          </div>
-          <div>
-            <img className={imageSize()} src={c} />
-          </div>
-          <div className="flex flex-row items-center">
-            <img
-              className={portSize.width < 600 ? "w-12 h-10" : "w-24 h-20"}
-              src={sql}
-            />
-          </div>
-          <div>
-            <img className={imageSize()} src={html} />
-          </div>
-          <div>
-            <img className={imageSize()} src={css} />
-          </div>
+          {images.map((image, index) => {
+            return (
+              <div
+                className={image === sql ? `flex flex-row items-center` : ""}
+              >
+                <img
+                  key={index}
+                  className={
+                    image === sql
+                      ? `w-16 h-10 sm:w-24 sm:h-20`
+                      : `w-20 h-20 sm:w-24 sm:h-24`
+                  }
+                  src={image}
+                />
+              </div>
+            );
+          })}
         </section>
         {screenPercent >= 1.0 ? (
           <section className="mt-7 w-full flex flex-row justify-center items-start animate-bounce">
