@@ -1,4 +1,4 @@
-import dev from "./images/dev.png";
+import dev from "./images/JohnJosiah.jpeg";
 import css from "./images/css.svg";
 import html from "./images/html.svg";
 import javascript from "./images/javascript.svg";
@@ -59,17 +59,23 @@ export default function Experience({
       return "w-screen h-screen flex flex-col justify-between sticky top-0 bg-zinc-800 text-white font-noto";
   };
 
-  const string1 = `I'm a veteran and react developer with strong problem-solving and communication skills.`;
+  const string1 = `I'm a veteran that is passionate about developing software. I possess strong problem-solving and communication skills.`;
   const stringOne = string1.split("");
+  const string2 =
+    " My focus is to create fast, flexible, full-stack web applications.";
+  const stringTwo = string2.split("");
+  const string3 =
+    " I'm a Full-Stack Web Developer with a BS in Computer Science and experience with Microsoft";
+  const stringThree = string3.split("");
 
   return (
     <body id="Experience" className={bgMode ? light : dark()}>
-      <main className="mt-20  flex flex-col sm:flex-row items-center justify-center w-full h-1/3 text-sm">
+      <main className="mt-20 flex flex-col sm:flex-row items-center justify-center w-full h-1/3 text-sm">
         <section className="sm:w-1/2 md:w-1/3 h-3/4 flex flex-row justify-center ">
-          <img className="w-40 h-40" src={dev} />
+          <img className="w-48 h-48 sm:h-72 sm:w-72" src={dev} />
         </section>{" "}
         <section className="w-1/2 h-3/4 mr-3 sm:mt-0 mt-5  cursor-default space-y-5 text-md sm:text-lg">
-          <h1 className="font-noto font-semibold text-xl sm:text-start text-center">
+          <h1 className="font-noto font-semibold text-3xl sm:text-start text-center">
             About me
           </h1>
 
@@ -87,12 +93,31 @@ export default function Experience({
             })}
           </p>
 
-          <p className="space-y-5 ">
-            My focus is to create fast, flexible, full-stack web applications.
+          <p className="space-y-5">
+            {stringTwo.map((char, index) => {
+              return (
+                <span
+                  key={index}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className="animate-fade-in-down hover:self-start focus:text-blue-400  sm:hover:text-xl hover:font-bold hover:text-blue-400 hover:outline-2 hover:shadow-lg hover:outline-white"
+                >
+                  {char}
+                </span>
+              );
+            })}
           </p>
-          <p className="space-y-5 ">
-            Full-Stack Web Developer with a BS in Computer Science and
-            experience with Microsoft
+          <p className="space-y-5">
+            {stringThree.map((char, index) => {
+              return (
+                <span
+                  key={index}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className="animate-fade-in-down hover:self-start focus:text-blue-400  sm:hover:text-xl hover:font-bold hover:text-blue-400 hover:outline-2 hover:shadow-lg hover:outline-white"
+                >
+                  {char}
+                </span>
+              );
+            })}
           </p>
         </section>
       </main>
