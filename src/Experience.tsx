@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import { ports } from "./types";
 import downArrowBlack from "./images/downArrowBlack.png";
 import downArrowGradient from "./images/downArrowGradient.png";
+import ImageCard from "./components/experienceImage";
 
 export default function Experience({
   portSize,
@@ -78,7 +79,10 @@ export default function Experience({
     <body id="Experience" className={bgMode ? light : dark()}>
       <main className="mt-20 flex flex-col sm:flex-row items-center justify-center w-full h-1/3 text-sm">
         <section className="sm:w-1/2 md:w-1/3 h-3/4 flex flex-row justify-center sm:justify-start mt-3 ">
-          <img className="w-48 h-48 sm:h-72 sm:w-72" src={dev} />
+          <img
+            className="w-48 h-48 sm:h-72 sm:w-72 rounded-xl shadow-lg"
+            src={dev}
+          />
         </section>{" "}
         <section className="w-3/4 sm:w-1/2 lg:w-1/3 h-3/4 sm:mt-0 mt-5  cursor-default space-y-5 text-md sm:text-lg ">
           <h1 className="font-noto font-semibold text-3xl sm:text-start text-center">
@@ -131,21 +135,7 @@ export default function Experience({
         <h1 className="self-center mt-10">Skills</h1>
         <section className="flex flex-row justify-center w-full">
           {images.map((image, index) => {
-            return (
-              <div
-                className={image === sql ? `flex flex-row items-center` : ""}
-              >
-                <img
-                  key={index}
-                  className={
-                    image === sql
-                      ? `w-16 h-10 sm:w-24 sm:h-20`
-                      : `w-20 h-20 sm:w-24 sm:h-24`
-                  }
-                  src={image}
-                />
-              </div>
-            );
+            return <ImageCard key={index} image={image} />;
           })}
         </section>
         {screenPercent >= 1.0 ? (
