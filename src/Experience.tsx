@@ -7,7 +7,6 @@ import typescript from "./images/typescript.svg";
 import sql from "./images/sql-server.png";
 import c from "./images/C.svg";
 import { useEffect } from "react";
-
 import { ports } from "./types";
 import downArrowBlack from "./images/downArrowBlack.png";
 import downArrowGradient from "./images/downArrowGradient.png";
@@ -55,34 +54,49 @@ export default function Experience({
 
   const dark = () => {
     if (portSize.width > 600) {
-      return "w-screen h-screen flex flex-col justify-center sticky top-0 bg-zinc-900 text-white font-noto";
+      return "w-screen h-screen flex flex-col justify-between sticky top-0 bg-zinc-900 text-white font-noto";
     } else
-      return "w-screen h-screen flex flex-col justify-start sticky top-0 bg-zinc-800 text-white font-noto";
+      return "w-screen h-screen flex flex-col justify-between sticky top-0 bg-zinc-800 text-white font-noto";
   };
+
+  const string1 = `I'm a veteran and react developer with strong problem-solving and communication skills.`;
+  const stringOne = string1.split("");
 
   return (
     <body id="Experience" className={bgMode ? light : dark()}>
-      <main className="flex flex-row-reverse w-full h-1/2 mt-10 text-sm">
-        <section className="w-1/2 h-3/4 mr-3">
-          <h1 className="font-noto font-semibold text-xl">About me</h1>
-          <p>
-            I'm a veteran and react developer with strong problem-solving and
-            communication skills.
-          </p>
-          <p>
-            My focus is to learn and create fast, flexible, mobile-first
-            applications.
-          </p>
-          <p>
-            Currently a student of Microsoft Software Systems Academy learning
-            about C#, transact-SQl and Azure Cloud Development
-          </p>
-        </section>
-        <section className="w-1/2 h-3/4 flex flex-row justify-center ">
+      <main className="mt-20  flex flex-col sm:flex-row items-center justify-center w-full h-1/3 text-sm">
+        <section className="sm:w-1/2 md:w-1/3 h-3/4 flex flex-row justify-center ">
           <img className="w-40 h-40" src={dev} />
+        </section>{" "}
+        <section className="w-1/2 h-3/4 mr-3 sm:mt-0 mt-5  cursor-default space-y-5 text-md sm:text-lg">
+          <h1 className="font-noto font-semibold text-xl sm:text-start text-center">
+            About me
+          </h1>
+
+          <p className="space-y-5">
+            {stringOne.map((char, index) => {
+              return (
+                <span
+                  key={index}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className="animate-fade-in-down hover:self-start focus:text-blue-400  sm:hover:text-xl hover:font-bold hover:text-blue-400 hover:outline-2 hover:shadow-lg hover:outline-white"
+                >
+                  {char}
+                </span>
+              );
+            })}
+          </p>
+
+          <p className="space-y-5 ">
+            My focus is to create fast, flexible, full-stack web applications.
+          </p>
+          <p className="space-y-5 ">
+            Full-Stack Web Developer with a BS in Computer Science and
+            experience with Microsoft
+          </p>
         </section>
       </main>
-      <footer className=" w-full flex flex-col justify-start h-1/4 self-center">
+      <footer className="mb-24 w-full flex flex-col justify-center h-1/4 self-center">
         <h1 className="self-center mt-10">Skills</h1>
         <section className="flex flex-row justify-center w-full">
           <div>
