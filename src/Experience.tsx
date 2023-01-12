@@ -60,7 +60,8 @@ export default function Experience({
       return "w-screen h-screen flex flex-col justify-between sticky top-0 bg-zinc-800 text-white font-noto";
   };
 
-  const string1 = `I'm a veteran that is passionate about developing software. I possess strong problem-solving and communication skills.`;
+  const string1 = `I'm a veteran that is passionate about developing software.
+  I possess strong problem-solving and communication skills.`;
   const stringOne = string1.split("");
   const string2 =
     " My focus is to create fast, flexible, full-stack web applications.";
@@ -75,6 +76,7 @@ export default function Experience({
     />
   </div>;
   const images = [typescript, javascript, react, css, html, sql, c];
+
   return (
     <body id="Experience" className={bgMode ? light : dark()}>
       <main className="mt-20 flex flex-col sm:flex-row items-center justify-center w-full h-1/3 text-sm">

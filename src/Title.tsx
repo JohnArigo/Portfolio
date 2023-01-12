@@ -1,8 +1,9 @@
 import { ports } from "./types";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import downArrowBlack from "./images/downArrowBlack.png";
 import downArrowGradient from "./images/downArrowGradient.png";
 import { Typewriter } from "react-simple-typewriter";
+import Loader from "./components/loader";
 export default function Title({
   portSize,
   setPortSize,
@@ -10,6 +11,7 @@ export default function Title({
   scrollSize,
   screenPercent,
   bgMode,
+  loading,
 }: ports) {
   useEffect(() => {
     function handleResize() {
@@ -59,8 +61,10 @@ export default function Title({
 
   const mainLight = "flex flex-row h-5/6 w-full justify-end items-end";
   const mainDark = "flex flex-row h-5/6 w-full items-start";
+
   return (
     <body id="home" className={bgMode ? light : dark()}>
+      {loading ? <Loader /> : null}
       {portSize.width > 600 && bgMode ? (
         <div className="bg-gray-50 w-1/2 flex justify-start px-16">
           <div className="relative max-w-lg">

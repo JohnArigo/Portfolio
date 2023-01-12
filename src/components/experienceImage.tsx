@@ -10,9 +10,10 @@ const ImageCard = ({ image, key }: ImageCardProps) => {
 
   return (
     <div
-      className={
-        image === sql ? `flex flex-row items-center bg-transparent` : ""
-      }
+      className={`
+       cursor-pointer ${
+         image === sql ? `flex flex-row items-center bg-transparent` : ""
+       }`}
     >
       <img
         onClick={() => setClicked(!clicked)}

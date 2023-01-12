@@ -9,6 +9,7 @@ export type ports = {
   setScrollSize: React.Dispatch<React.SetStateAction<number>>;
   screenPercent: number;
   bgMode: boolean;
+  loading?: boolean;
 };
 
 export type handleType = {

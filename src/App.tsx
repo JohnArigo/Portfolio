@@ -4,7 +4,7 @@ import Contact from "./Contact";
 import Experience from "./Experience";
 import Projects from "./Projects";
 import Title from "./Title";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { portType } from "./types";
 import { Route, Routes } from "react-router-dom";
 import { home } from "./routes";
@@ -18,6 +18,14 @@ function App() {
   const screenPercent = scrollSize / portSize.height;
   const [bgMode, setBgMode] = useState(false);
 
+  const [loading, setLoading] = useState(true);
+  const [timer, setTimer] = useState(3);
+  useEffect(() => {
+    timer > 0 && setTimeout(() => setTimer(timer - 1), 1000);
+    if (timer === 0) {
+      setLoading(false);
+    }
+  }, [timer]);
   return (
     <>
       <Routes>
@@ -33,6 +41,7 @@ function App() {
                 setBgMode={setBgMode}
               />
               <Title
+                loading={loading}
                 scrollSize={scrollSize}
                 setScrollSize={setScrollSize}
                 portSize={portSize}
