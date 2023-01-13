@@ -1,4 +1,4 @@
-<h1>Welcome to my Portfolio Website<h1>
+<h1>Welcome to my Portfolio Website</h1>
 
 I am a full stack developer with a strong focus on React, TypeScript, JavaScript, HTML, and CSS. My portfolio website is a Single Page Application (SPA) that showcases my skills and experience as a developer.
 
