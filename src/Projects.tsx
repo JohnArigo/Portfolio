@@ -46,7 +46,7 @@ export default function Projects({
   const images = [
     {
       src: shop,
-      image: "shopping",
+      image: "bg-shopping",
       text: "Object manipulation! This app was really challening. I had to conceptualize the essentials of an e-commerence app and translate it to how I can display it using react. I called the Fake Store API to display products in individualcards. Utilized filtering for user end sorting/filtering. It can be by categories, name or price. Creating a new object child to store quantity for the shopping cart to be checked out. I also created basic form validation and formatting. Lastly, I created a functional feedback form that sends an email to designated address using EmailJS. Utilized JS/React, HTML5, CSS3/Tailwind",
       tools:
         "JavaScript, React, Tailwind CSS, Mantine UI, Fake Store API, EmailJS",
@@ -54,7 +54,7 @@ export default function Projects({
     },
     {
       src: weather,
-      image: "weather",
+      image: "bg-weather",
       text: "This app was a challenge to create. I had to conceptualize the essentials of a weather app and translate it to how I can display it using react. I called the OpenWeather API to display the weather in a city. I also created a search bar that allows the user to search for a city. Lastly, I created a functional feedback form that sends an email to designated address using EmailJS. Utilized JS/React, HTML5, CSS3/Tailwind",
       tools:
         "JavaScript, React, Tailwind CSS, Mantine UI, OpenWeather API, EmailJS",
@@ -62,14 +62,14 @@ export default function Projects({
     },
     {
       src: notes,
-      image: "notes",
+      image: "bg-notes",
       text: "My first app! It is made with JS/React, HTML5 and CSS3.  Practiced CRUD, state and data manipulation. Stores notes on local storage. Created in codesandbox. This project helped me visualize and understand how props and state can be passed throughout each component and how to edit, add and delete items within an array.",
       tools: "JavaScript, React, Tailwind CSS, Mantine UI, EmailJS",
-      href: "https://johnarigo.github.io/notes-app/",
+      href: "https://l5ot6e.csb.app/",
     },
     {
       src: social,
-      image: "social",
+      image: "bg-social",
       text: "Object manipulation! This app was really challening. I had to conceptualize the essentials of an e-commerence app and translate it to how I can display it using react. I called the Fake Store API to display products in individual cards. Utilized filtering for user end sorting/filtering. It can be by categories, name or price. Creating a new object child to store quantity for the shopping cart to be checked out. I also created basic form validation and formatting. Lastly, I created a functional feedback form that sends an email to designated address using EmailJS. Utilized JS/React, HTML5, CSS3/Tailwind",
       tools:
         " NextJS, TypeScript, React, NodeJS, Prisma, MySQL, PlanetScale, Tailwind CSS",
@@ -113,7 +113,7 @@ export default function Projects({
                         Language, Tools, and Libraries: {image.tools}
                       </h1>
                       <div
-                        className={`h-5/6 w-full shadow-xl flex justify-center items-center text-transparent hover:text-zinc-800 sm:bg-${image.image} bg-cover bg-center`}
+                        className={`h-5/6 w-full shadow-xl flex justify-center items-center text-transparent hover:text-zinc-800 ${image.image} bg-cover bg-center`}
                       >
                         <h1 className="text-transparent">{image.src}</h1>
                       </div>
