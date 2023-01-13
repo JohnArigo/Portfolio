@@ -19,7 +19,7 @@ function App() {
   const [bgMode, setBgMode] = useState(false);
 
   const [loading, setLoading] = useState(true);
-  const [timer, setTimer] = useState(5);
+  const [timer, setTimer] = useState(4);
   useEffect(() => {
     timer > 0 && setTimeout(() => setTimer(timer - 1), 1000);
     if (timer === 0) {

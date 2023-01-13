@@ -37,12 +37,12 @@ export default function Title({
   }, []);
 
   const light =
-    " w-screen h-screen flex flex-row flex-wrap  sticky top-0 bg-gray-50 text-slate-900 ";
+    " w-screen h-screen flex flex-row flex-wrap  sticky top-0 bg-gray-50 text-slate-900 transform transition-all duration-500 ease-in-out text-opacity-100 ";
   const dark = () => {
     if (portSize.width > 600)
-      return "w-screen h-screen flex flex-row flex-wrap  sticky top-0 bg-black text-white bg-Book bg-cover";
+      return "w-screen h-screen flex flex-row flex-wrap  sticky top-0 bg-black text-white bg-Book bg-cover bg-no-repeat bg-center transform transition-all duration-500 ease-in-out text-opacity-100";
     else
-      return "w-screen h-screen flex flex-row flex-wrap  sticky top-0 bg-zinc-900 text-white";
+      return "w-screen h-screen flex flex-row flex-wrap  sticky top-0 bg-zinc-900 text-white transform transition-all duration-500 ease-in-out text-opacity-100";
   };
 
   const textLight = () => {
