@@ -78,7 +78,7 @@ export default function Projects({
   ];
   return (
     <body id="Projects" className={bgMode ? light : dark()}>
-      <h1 className="h-20 mt-5 text-xl w-full text-center font-bold self-start">
+      <h1 className="h-20 mt-5 text-xl sm:text-3xl w-full text-center font-bold self-start">
         Here are my latest projects
       </h1>
       <section className={bgMode ? lightCarousel : darkCarousel}>
