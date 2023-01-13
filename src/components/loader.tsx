@@ -16,7 +16,7 @@ const Loader = ({ timer }: LoaderProps) => {
 
   return (
     <div
-      className={`z-50 bg-zinc-900 w-screen h-screen sticky top-0 left-0 overflow-none flex flex-col justify-center items-center ${
+      className={`z-50 bg-zinc-900 w-screen h-screen absolute sm:sticky top-0 left-0 overflow-none flex flex-col justify-center items-center ${
         timer <= 1
           ? `transfrom transition-opacity ease-in duration-1000 opacity-0`
           : ""
