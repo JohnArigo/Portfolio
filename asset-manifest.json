@@ -1,10 +1,14 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.bf4fabad.css",
-    "main.js": "/Portfolio/static/js/main.c036557b.js",
+    "main.css": "/Portfolio/static/css/main.01a395d7.css",
+    "main.js": "/Portfolio/static/js/main.90736a18.js",
+    "static/media/shoppingFull.png": "/Portfolio/static/media/shoppingFull.85161038cf74301c0fcd.png",
+    "static/media/socialFull.png": "/Portfolio/static/media/socialFull.d1df6fe2dfd10c71b58c.png",
+    "static/media/weatherFull.png": "/Portfolio/static/media/weatherFull.c8f6d689081778788ca5.png",
     "static/media/weather.png": "/Portfolio/static/media/weather.a4cada11de46b6799d8b.png",
     "static/media/shop.png": "/Portfolio/static/media/shop.c3cab42427d2f47c7c1b.png",
     "static/media/JohnJosiah.jpeg": "/Portfolio/static/media/JohnJosiah.456a3417cd88c6a75731.jpeg",
+    "static/media/notesFull.png": "/Portfolio/static/media/notesFull.901d2531876da2bd36ac.png",
     "static/media/social.png": "/Portfolio/static/media/social.7aa93a196f1c171c2c28.png",
     "static/media/notes.png": "/Portfolio/static/media/notes.7dc4a37c17ba35381557.png",
     "static/media/bgImageDark.avif": "/Portfolio/static/media/bgImageDark.79fea57263513e4aed81.avif",
@@ -19,11 +23,11 @@
     "static/media/linkedIn.svg": "/Portfolio/static/media/linkedIn.c74d5fc8f60e6a3922badaafa95f6b4a.svg",
     "static/media/css.svg": "/Portfolio/static/media/css.db7dfd1247623e1e9223d8ef28a37432.svg",
     "static/media/html.svg": "/Portfolio/static/media/html.a026abbb678246d70ee9b70e4aee972c.svg",
-    "main.bf4fabad.css.map": "/Portfolio/static/css/main.bf4fabad.css.map",
-    "main.c036557b.js.map": "/Portfolio/static/js/main.c036557b.js.map"
+    "main.01a395d7.css.map": "/Portfolio/static/css/main.01a395d7.css.map",
+    "main.90736a18.js.map": "/Portfolio/static/js/main.90736a18.js.map"
   },
   "entrypoints": [
-    "static/css/main.bf4fabad.css",
-    "static/js/main.c036557b.js"
+    "static/css/main.01a395d7.css",
+    "static/js/main.90736a18.js"
   ]
 }
