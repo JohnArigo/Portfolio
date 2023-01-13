@@ -88,7 +88,6 @@ export default function Title({
                 "a Veteran",
                 "a Student",
                 "an Innovator",
-                "a Proud Dad",
               ]}
               cursor
               cursorColor="red"

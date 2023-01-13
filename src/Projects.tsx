@@ -43,10 +43,39 @@ export default function Projects({
   const darkCarousel =
     "w-full h-4/6 mt-5 flex flex-row justify-center items-center ";
 
-  const [c1, setC1] = useState<boolean>(false);
-  const [c2, setC2] = useState<boolean>(false);
-  const [c3, setC3] = useState<boolean>(false);
-  const [c4, setC4] = useState<boolean>(false);
+  const images = [
+    {
+      src: shop,
+      image: "shopping",
+      text: "Object manipulation! This app was really challening. I had to conceptualize the essentials of an e-commerence app and translate it to how I can display it using react. I called the Fake Store API to display products in individualcards. Utilized filtering for user end sorting/filtering. It can be by categories, name or price. Creating a new object child to store quantity for the shopping cart to be checked out. I also created basic form validation and formatting. Lastly, I created a functional feedback form that sends an email to designated address using EmailJS. Utilized JS/React, HTML5, CSS3/Tailwind",
+      tools:
+        "JavaScript, React, Tailwind CSS, Mantine UI, Fake Store API, EmailJS",
+      href: "https://johnarigo.github.io/shopping-app/",
+    },
+    {
+      src: weather,
+      image: "weather",
+      text: "This app was a challenge to create. I had to conceptualize the essentials of a weather app and translate it to how I can display it using react. I called the OpenWeather API to display the weather in a city. I also created a search bar that allows the user to search for a city. Lastly, I created a functional feedback form that sends an email to designated address using EmailJS. Utilized JS/React, HTML5, CSS3/Tailwind",
+      tools:
+        "JavaScript, React, Tailwind CSS, Mantine UI, OpenWeather API, EmailJS",
+      href: "https://johnarigo.github.io/weather-app/",
+    },
+    {
+      src: notes,
+      image: "notes",
+      text: "My first app! It is made with JS/React, HTML5 and CSS3.  Practiced CRUD, state and data manipulation. Stores notes on local storage. Created in codesandbox. This project helped me visualize and understand how props and state can be passed throughout each component and how to edit, add and delete items within an array.",
+      tools: "JavaScript, React, Tailwind CSS, Mantine UI, EmailJS",
+      href: "https://johnarigo.github.io/notes-app/",
+    },
+    {
+      src: social,
+      image: "social",
+      text: "Object manipulation! This app was really challening. I had to conceptualize the essentials of an e-commerence app and translate it to how I can display it using react. I called the Fake Store API to display products in individual cards. Utilized filtering for user end sorting/filtering. It can be by categories, name or price. Creating a new object child to store quantity for the shopping cart to be checked out. I also created basic form validation and formatting. Lastly, I created a functional feedback form that sends an email to designated address using EmailJS. Utilized JS/React, HTML5, CSS3/Tailwind",
+      tools:
+        " NextJS, TypeScript, React, NodeJS, Prisma, MySQL, PlanetScale, Tailwind CSS",
+      href: "https://johnpauloarigo.com/",
+    },
+  ];
   return (
     <body id="Projects" className={bgMode ? light : dark()}>
       <h1 className="h-1/6 mt-5 text-xl w-full text-center font-bold self-start">
@@ -74,114 +103,28 @@ export default function Projects({
             },
           }}
         >
-          <Carousel.Slide className="flex flex-row justify-center">
-            <a href="https://johnpauloarigo.com/">
-              {portSize.width > 600 ? (
-                <div className="h-full w-full">
-                  <h1 className="h-1/6">
-                    Language, Tools, and Libraries: NextJS, TypeScript, React,
-                    NodeJS, Prisma, MySQL, PlanetScale, Tailwind CSS
-                  </h1>
-                  <div className="h-5/6 w-full flex justify-center items-center text-transparent hover:text-zinc-800 sm:bg-social bg-cover">
-                    <h1 className="text-transparent">
-                      Object manipulation! This app was really challening. I had
-                      to conceptualize the essentials of an e-commerence app and
-                      translate it to how I can display it using react. I called
-                      the Fake Store API to display products in individual
-                      cards. Utilized filtering for user end sorting/filtering.
-                      It can be by categories, name or price. Creating a new
-                      object child to store quantity for the shopping cart to be
-                      checked out. I also created basic form validation and
-                      formatting. Lastly, I created a functional feedback form
-                      that sends an email to designated address using EmailJS.
-                      Utilized JS/React, HTML5, CSS3/Tailwind
-                    </h1>
-                  </div>
-                </div>
-              ) : (
-                <img className="h-96 w-56 shadow-lg" src={social} />
-              )}
-            </a>
-          </Carousel.Slide>
-          <Carousel.Slide className="flex flex-row justify-center">
-            <a href="https://johnarigo.github.io/shopping-app/">
-              {portSize.width > 600 ? (
-                <div className="h-full w-full">
-                  <h1 className="h-1/6">
-                    Language, Tools, and Libraries: JavaScript, React, Tailwind
-                    CSS, Mantine UI
-                  </h1>
-                  <div className="h-full w-full flex justify-center items-center text-transparent hover:text-zinc-800 sm:bg-shopping bg-cover">
-                    <h1 className="text-transparent">
-                      Object manipulation! This app was really challening. I had
-                      to conceptualize the essentials of an e-commerence app and
-                      translate it to how I can display it using react. I called
-                      the Fake Store API to display products in individual
-                      cards. Utilized filtering for user end sorting/filtering.
-                      It can be by categories, name or price. Creating a new
-                      object child to store quantity for the shopping cart to be
-                      checked out. I also created basic form validation and
-                      formatting. Lastly, I created a functional feedback form
-                      that sends an email to designated address using EmailJS.
-                      Utilized JS/React, HTML5, CSS3/Tailwind
-                    </h1>
-                  </div>
-                </div>
-              ) : (
-                <img className="h-96 w-56 shadow-lg" src={shop} />
-              )}
-            </a>
-          </Carousel.Slide>
-          <Carousel.Slide className="flex flex-row justify-center">
-            <a href="https://johnarigo.github.io/weather-app/">
-              {portSize.width > 600 ? (
-                <div className="h-full w-full">
-                  <h1 className="h-1/6">
-                    Language, Tools, and Libraries: TypeScript, React, Tailwind
-                    CSS, APIs, OpenWeatherMap
-                  </h1>
-                  <div className="h-full w-full flex justify-center items-center text-transparent hover:text-zinc-800 sm:bg-weather bg-cover">
-                    <h1 className="text-transparent">
-                      The app I learned typescript on. Using
-                      Typescript/HTML5/CSS3/Tailwind This app helped me learn
-                      the essentials of matching types and declaring them. I
-                      really enjoyed the OpenWeather API for its ease of use and
-                      great documentation. I learned a lot about styling cards
-                      with this componenet and the functionality of flexbox and
-                      tailwind API. This App displays current weather and future
-                      weather up to 5 days! You can find each city by zipcode.
-                    </h1>
-                  </div>
-                </div>
-              ) : (
-                <img className=" shadow-lg h-96 w-56" src={weather} />
-              )}
-            </a>
-          </Carousel.Slide>
-          <Carousel.Slide className="flex flex-row justify-center">
-            <a href="https://l5ot6e.csb.app/">
-              {portSize.width > 600 ? (
-                <div className="h-full w-full">
-                  <h1 className="h-1/6">
-                    Language, Tools, and Libraries: JavaScript, React, Tailwind
-                    CSS, Mantine UI
-                  </h1>
-                  <div className="h-full w-full flex justify-center items-center text-transparent hover:text-zinc-800 sm:bg-notes bg-cover">
-                    <h1 className="text-transparent">
-                      My first app! It is made with JS/React, HTML5 and CSS3.
-                      Practiced CRUD, state and data manipulation. Stores notes
-                      on local storage. Created in codesandbox. This project
-                      helped me visualize and understand how props and state can
-                      be passed throughout each component and how to edit, add
-                      and delete items within an array.
-                    </h1>
-                  </div>
-                </div>
-              ) : (
-                <img className=" shadow-lg h-96 w-56" src={notes} />
-              )}
-            </a>
-          </Carousel.Slide>
+          {images.map((image) => {
+            return (
+              <Carousel.Slide className="flex flex-row justify-center">
+                <a href={image.href}>
+                  {portSize.width > 600 ? (
+                    <div className="h-full w-full">
+                      <h1 className="h-1/6">
+                        Language, Tools, and Libraries: {image.tools}
+                      </h1>
+                      <div
+                        className={`h-5/6 w-full flex justify-center items-center text-transparent hover:text-zinc-800 sm:bg-${image.image} bg-cover`}
+                      >
+                        <h1 className="text-transparent">{image.src}</h1>
+                      </div>
+                    </div>
+                  ) : (
+                    <img className="h-96 w-56 shadow-lg" src={image.src} />
+                  )}
+                </a>
+              </Carousel.Slide>
+            );
+          })}
         </Carousel>
       </section>
       {screenPercent >= 2.0 ? (
