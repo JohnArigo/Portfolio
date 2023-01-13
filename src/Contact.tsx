@@ -26,7 +26,6 @@ export default function Contact({
     firstName: "",
     lastName: "",
     email: "",
-    phone: 8888888888,
     message: "",
   });
   const [modalState, setModalState] = useState<boolean>(false);
@@ -164,22 +163,25 @@ export default function Contact({
       </form>
       <footer className="flex flex-row">
         {bgMode ? (
-          <div className="mt-1 mr-8">
-            <a href="https://github.com/raggedyragz">
-              <img className="w-12 h-12" src={githubR} />
+          <div className="mt-2 mr-8">
+            <a href="https://github.com/johnarigo">
+              <img className="w-16 h-16" src={githubR} />
             </a>
           </div>
         ) : (
-          <div className="mt-1 mr-8">
-            <a href="https://github.com/JohnArigo">
-              <img className="w-12 h-12" src={whiteGit} />
+          <div className="mt-2 mr-8 shadow-lg">
+            <a href="https://github.com/johnarigo">
+              <img className="w-16 h-16" src={whiteGit} />
             </a>
           </div>
         )}
 
-        <div className="flex justify-center items-center">
+        <div
+          className={`flex justify-center items-center
+          }`}
+        >
           <a href="https://www.linkedin.com/in/john-arigo/">
-            <img className="w-14 h-14" src={linkedIn} />
+            <img className="w-20 h-20" src={linkedIn} />
           </a>
         </div>
       </footer>

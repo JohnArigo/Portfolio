@@ -78,7 +78,7 @@ export default function Projects({
   ];
   return (
     <body id="Projects" className={bgMode ? light : dark()}>
-      <h1 className="h-1/6 mt-5 text-xl w-full text-center font-bold self-start">
+      <h1 className="h-20 mt-5 text-xl w-full text-center font-bold self-start">
         Here are my latest projects
       </h1>
       <section className={bgMode ? lightCarousel : darkCarousel}>
@@ -113,7 +113,7 @@ export default function Projects({
                         Language, Tools, and Libraries: {image.tools}
                       </h1>
                       <div
-                        className={`h-5/6 w-full flex justify-center items-center text-transparent hover:text-zinc-800 sm:bg-${image.image} bg-cover`}
+                        className={`h-5/6 w-full shadow-xl flex justify-center items-center text-transparent hover:text-zinc-800 sm:bg-${image.image} bg-cover bg-center`}
                       >
                         <h1 className="text-transparent">{image.src}</h1>
                       </div>
