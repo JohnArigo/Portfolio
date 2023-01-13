@@ -85,7 +85,7 @@ export default function Experience({
             className="w-48 h-48 sm:h-72 sm:w-72 rounded-xl shadow-lg"
             src={dev}
           />
-        </section>{" "}
+        </section>
         <section className="w-3/4 sm:w-1/2 lg:w-1/3 h-3/4 sm:mt-0 mt-5  cursor-default space-y-5 text-md sm:text-lg ">
           <h1 className="font-noto font-semibold text-3xl sm:text-start text-center">
             About me
