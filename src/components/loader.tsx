@@ -16,7 +16,7 @@ const Loader = ({ timer }: LoaderProps) => {
 
   return (
     <div
-      className={`z-50 bg-white w-screen h-screen sticky top-0 left-0 overflow-none flex justify-center items-center ${
+      className={`z-50 bg-zinc-900 w-screen h-screen sticky top-0 left-0 overflow-none flex flex-col justify-center items-center ${
         timer <= 1
           ? `transfrom transition-opacity ease-in duration-1000 opacity-0`
           : ""
@@ -25,10 +25,9 @@ const Loader = ({ timer }: LoaderProps) => {
       {/* PLANE <div>
         <img className="w-1/6 animate-increase-width" src={plane} />
       </div> */}
-      <div className="w-96 h-10 border-2 border-black">
-        <div className="bg-orange-400 text-center font-bold text-xl animate-increase-width h-full w-full ">
-          {count}%
-        </div>
+      <h2>{count}%</h2>
+      <div className="w-96 h-8 border border-white">
+        <div className="bg-gray-50 text-center font-bold text-xl animate-increase-width h-full w-full "></div>
       </div>
     </div>
   );
