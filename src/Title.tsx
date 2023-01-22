@@ -77,7 +77,7 @@ export default function Title({
       ) : null}
       <section className={bgMode ? mainLight : mainDark}>
         <main className={bgMode ? textLight() : textDark()}>
-          <h1 className="self-center text-center">
+          <h1 className="self-center text-center sm:text-5xl font-bold">
             Hello, my name is John Arigo
           </h1>
           <h3 className="self-center text-center text-lg mt-5">
